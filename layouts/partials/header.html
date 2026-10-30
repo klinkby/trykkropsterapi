@@ -16,13 +16,4 @@
     <a class="btn" href="{{ . }}" title="Gå til tidsbestilling">Book tid og se priser</a>
     {{- end }}
   </div>
-  {{- with .Site.Menus.main }}
-  <nav class="primary-nav" aria-label="Primær navigation">
-    <ul>
-      {{- range . }}
-      <li><a href="{{ .URL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-      {{- end }}
-    </ul>
-  </nav>
-  {{- end }}
 </header>

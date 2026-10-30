@@ -5,9 +5,6 @@ tile: "Om TRYK"
 description: "Det er kombinationen af min viden fra det sangpædagogiske, anatomien og den praktiske mangeårige erfaring, jeg betragter som min største force."
 weight: 60
 draft: false
-menus:
-  main:
-    weight: 60
 ---
 
 > Det er kombinationen af min viden fra det sangpædagogiske, anatomien, den praktiske mangeårige

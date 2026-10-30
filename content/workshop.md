@@ -5,9 +5,6 @@ tile: "Teambuilding & polterabend"
 description: "Når vi synger sammen, hører vi sammen, og der skabes nærvær, glæde og en stor mængde positiv energi mellem deltagerne."
 weight: 70
 draft: false
-menus:
-  main:
-    weight: 70
 ---
 
 > Når vi synger sammen, hører vi sammen, og der skabes nærvær, glæde og en stor mængde positiv energi

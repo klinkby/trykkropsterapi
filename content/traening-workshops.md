@@ -5,9 +5,6 @@ tile: "Workshops & træning"
 description: "Disse workshops er for alle og kræver ingen særlige forudsætninger. Kropsterapeutisk træning flytter opmærksomhed fra hovedets tanker og ned i kroppen."
 weight: 40
 draft: false
-menus:
-  main:
-    weight: 40
 ---
 
 > **Disse workshops er for alle og kræver ingen særlige forudsætninger. Har du en kropslig

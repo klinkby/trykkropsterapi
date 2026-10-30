@@ -4,9 +4,6 @@ tile: "Massage (fysiurgisk og gravid)"
 description: "Fysiurgisk massage er yderst effektivt ved stresstilstande, som giver både mental og kropslig uro."
 weight: 30
 draft: false
-menus:
-  main:
-    weight: 30
 ---
 
 **I, der kender mig, ved, at jeg bruger al min viden uanset type af behandling og bruger forskellige

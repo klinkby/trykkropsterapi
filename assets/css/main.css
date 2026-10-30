@@ -35,14 +35,19 @@ body {
 
 img { max-width: 100%; height: auto; }
 
-a { color: var(--link); }
-a:hover { color: #23527c; }
+/* Bootstrap-afstande som originalen */
+p, ul, ol { margin: 0 0 10px; }
+
+/* Som originalen: ingen understregning. Linkfarven har 3,36:1 mod brødteksten,
+   og hover understreger (WCAG 1.4.1, G183). */
+a { color: var(--link); text-decoration: none; }
+a:hover { color: #23527c; text-decoration: underline; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
 h1, h2 {
   font: 500 2.25rem/1.1 var(--sans);
   color: var(--heading);
-  margin: 0 0 .5em;
+  margin: 20px 0 10px;
 }
 h2 { font-size: 1.75rem; margin-top: 1.25em; }
 
@@ -82,14 +87,14 @@ h2 { font-size: 1.75rem; margin-top: 1.25em; }
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   color: var(--gold);
   text-decoration: none;
   text-align: center;
 }
-.logo:hover { color: var(--gold); }
-.logo-name { display: block; font-size: 2.5em; line-height: .9; }
+.logo:hover { color: var(--gold); text-decoration: none; }
+.logo-name { display: block; font-size: 2.5em; line-height: .75; }
 .logo-tagline { display: block; }
 .logo-mark { display: none; }
 
@@ -99,7 +104,6 @@ h2 { font-size: 1.75rem; margin-top: 1.25em; }
   align-items: flex-end;
   gap: 1rem;
 }
-.facebook { text-decoration: none; }
 .facebook img { vertical-align: -2px; }
 
 .btn {
@@ -113,18 +117,7 @@ h2 { font-size: 1.75rem; margin-top: 1.25em; }
   color: var(--muted);
   text-decoration: none;
 }
-.btn:hover { background: var(--mint-light); color: var(--muted); }
-
-.primary-nav { flex-basis: 100%; }
-.primary-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .25em 1.25em;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.primary-nav [aria-current="page"] { color: var(--ink); text-decoration: none; }
+.btn:hover { background: var(--mint-light); color: var(--muted); text-decoration: none; }
 
 /* Indhold */
 .page-header {
@@ -134,12 +127,11 @@ h2 { font-size: 1.75rem; margin-top: 1.25em; }
   align-items: baseline;
   gap: 0 var(--gutter);
 }
-.back { text-decoration: none; }
 .back::before { content: "← "; }
 
 blockquote {
-  margin: 0 0 1.25em;
-  padding: .5em 1.25em;
+  margin: 0 0 20px;
+  padding: 10px 20px;
   border-left: 5px solid var(--mint-quote);
   font-size: 1.1em;
   font-style: italic;
@@ -176,7 +168,7 @@ blockquote > :last-child { margin-bottom: 0; }
   text-transform: uppercase;
   text-decoration: none;
 }
-.tiles a:hover { border-color: var(--link); }
+.tiles a:hover { border-color: var(--link); text-decoration: none; }
 
 /* Footer */
 .site-footer {
@@ -187,8 +179,7 @@ blockquote > :last-child { margin-bottom: 0; }
   background: var(--mint);
   text-align: center;
 }
-.site-footer a { color: var(--ink); text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; }
+.site-footer a { color: var(--ink); }
 .footer-address { font-style: normal; }
 .footer-contact {
   display: grid;
@@ -200,7 +191,6 @@ blockquote > :last-child { margin-bottom: 0; }
 }
 .footer-contact dt { color: var(--muted); }
 .footer-contact dd { margin: 0; }
-.footer-legal { grid-column: 1 / -1; margin: 0; font-size: .85em; }
 
 /* Bred skærm */
 @media (min-width: 768px) {
@@ -214,6 +204,7 @@ blockquote > :last-child { margin-bottom: 0; }
   .page > :first-child { padding-bottom: 0; }
 
   .logo-name { font-size: 3.9em; }
+  .header-actions { gap: 2.8em; }
   .logo-mark { display: block; }
 
   .site-footer { grid-template-columns: auto auto; }
