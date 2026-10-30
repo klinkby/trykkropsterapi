@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Hugo site for trykmassage. Static, deployed to GitHub Pages.
+Hugo site for trykkropsterapi. Static, deployed to GitHub Pages.
 
 ## Commands
 

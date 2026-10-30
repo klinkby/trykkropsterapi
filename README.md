@@ -1,4 +1,4 @@
-# trykmassage
+# trykkropsterapi
 
 Statisk website bygget med [Hugo](https://gohugo.io/) og udgivet på GitHub Pages.
 
@@ -72,7 +72,7 @@ giver `Disallow: /` i robots.txt og et `noindex`-metatag).
 ## Mangler afklaring
 
 - **Domæne.** Ukendt — `static/CNAME` mangler, og `baseURL` peger på
-  `klinkby.github.io/trykmassage/`.
+  `klinkby.github.io/trykkropsterapi/`.
 - **Adresse.** Footeren på det nuværende site skriver "Kigkurren 8D, st.tv.",
   men kortlinket peger på "Kigkurren 8T". Sitet bruger 8D. Skal bekræftes.
 

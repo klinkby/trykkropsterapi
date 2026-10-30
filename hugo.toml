@@ -1,5 +1,5 @@
 # TODO: sæt det rigtige domæne (og static/CNAME) når det kendes.
-baseURL = "https://klinkby.github.io/trykmassage/"
+baseURL = "https://klinkby.github.io/trykkropsterapi/"
 locale = "da-dk"
 defaultContentLanguage = "da"
 title = "TRYK - Kropsterapi Sang Massage"
