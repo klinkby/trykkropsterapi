@@ -46,6 +46,15 @@
 {{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- /* Faneikon ud fra fingeraftrykket (87×128), polstret til kvadrat. */}}
+{{- with resources.Get "img/fingeraftryk.png" }}
+  {{- /* Mørkere og mere kontrast, så rillerne ikke flyder ud til grå ved 32 px. */}}
+  {{- $icon := (.Filter (images.Padding 0 21 0 20 "#00000000") (images.Brightness -45) (images.Contrast 40)).Resize "32x32 png" }}
+  {{- $apple := (.Filter (images.Padding 16 37 16 36 "#f5f9fc")).Resize "180x180 png" }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $icon.RelPermalink }}">
+<link rel="apple-touch-icon" href="{{ $apple.RelPermalink }}">
+{{- end }}
+
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:title" content="{{ $title }}">
 {{- with $description }}
