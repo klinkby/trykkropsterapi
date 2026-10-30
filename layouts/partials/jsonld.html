@@ -1,0 +1,9 @@
+{{- /*
+  Emits a JSON string (or nothing when no schema applies to this page) — it does
+  NOT print a <script> tag itself. layouts/partials/head.html consumes the
+  output both to compute a CSP script-src hash and to print the actual
+  <script type="application/ld+json"> element, so the two always stay
+  byte-identical. No schemas yet.
+*/ -}}
+{{- $out := "" -}}
+{{- $out -}}

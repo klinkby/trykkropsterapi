@@ -1,0 +1,64 @@
+{{- $site := .Site -}}
+{{- $title := $site.Title -}}
+{{- if not .IsHome -}}
+  {{- $title = printf "%s · %s" .Title $site.Title -}}
+{{- end -}}
+{{- $description := .Description -}}
+
+{{- /* Build the page's JSON-LD once; reused for both the CSP hash and the
+       actual <script> element so the two can never drift apart. */ -}}
+{{- $ldjson := trim (printf "%s" (partial "jsonld.html" .)) " \n\t\r" -}}
+{{- $scriptSrc := "'self'" -}}
+{{- $styleSrc := "'self'" -}}
+{{- if $ldjson -}}
+  {{- $slug := "page" -}}
+  {{- if .IsHome -}}
+    {{- $slug = "home" -}}
+  {{- else -}}
+    {{- with .File -}}{{ $slug = .ContentBaseName }}{{- end -}}
+  {{- end -}}
+  {{- $ldRes := resources.FromString (printf "jsonld/%s.json" $slug) $ldjson -}}
+  {{- $ldFp := $ldRes | fingerprint "sha256" -}}
+  {{- $scriptSrc = printf "'self' '%s'" $ldFp.Data.Integrity -}}
+{{- end -}}
+
+{{- /* The whole stylesheet is inlined below so no render-blocking CSS request
+       is needed. It is minified and fingerprinted here so its SHA-256 can go
+       into the CSP style-src — the same hash-based approach used for the
+       inline JSON-LD above — keeping style-src strict without 'unsafe-inline'. */ -}}
+{{- $css := "" -}}
+{{- with resources.Get "css/main.css" -}}
+  {{- $css = . | minify | fingerprint "sha256" -}}
+  {{- $styleSrc = printf "'%s'" $css.Data.Integrity -}}
+{{- end -}}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; style-src {{ $styleSrc }}; script-src {{ $scriptSrc }}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+{{- if .Site.Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+<title>{{ $title }}</title>
+{{- with $description }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+{{- with $description }}
+<meta property="og:description" content="{{ . }}">
+{{- end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ $site.Title }}">
+<meta property="og:locale" content="da_DK">
+
+{{- with $css }}
+<style>{{ .Content | safeCSS }}</style>
+{{- end }}
+
+{{- if $ldjson }}
+<script type="application/ld+json">{{ $ldjson | safeJS }}</script>
+{{- end }}

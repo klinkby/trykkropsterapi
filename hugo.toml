@@ -1,0 +1,27 @@
+# TODO: sæt det rigtige domæne (og static/CNAME) når det kendes.
+baseURL = "https://klinkby.github.io/trykmassage/"
+locale = "da-dk"
+defaultContentLanguage = "da"
+title = "trykmassage"
+
+# We author every page/section/list/home template ourselves under layouts/.
+# No RSS/taxonomies are part of the information architecture, so they are
+# switched off to keep the build output lean and warning-free. The sitemap
+# stays enabled and uses Hugo's built-in template.
+disableKinds = ["RSS", "taxonomy", "term"]
+enableRobotsTXT = true # genereres af layouts/robots.txt
+
+[sitemap]
+  changeFreq = "monthly"
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Raw/unsafe HTML in Markdown stays disabled — content authors use
+      # shortcodes (see layouts/shortcodes/) for anything beyond prose.
+      unsafe = false
+
+[params]
+  # Må ikke indekseres før sitet er klar. Sæt til false ved lancering.
+  noindex = true
