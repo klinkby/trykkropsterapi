@@ -1,9 +1,11 @@
 ---
 title: "Fysiurgisk og gravidmassage"
-tile: "Massage (fysiurgisk og gravid)"
+tile: "MASSAGE (fysiurgisk og gravid)"
 description: "Fysiurgisk massage er yderst effektivt ved stresstilstande, som giver både mental og kropslig uro."
 weight: 30
 draft: false
+# Gammel URL fra det nuværende site
+aliases: ["/fysiurgisk - og gravidmassage/"]
 ---
 
 **I, der kender mig, ved, at jeg bruger al min viden uanset type af behandling og bruger forskellige

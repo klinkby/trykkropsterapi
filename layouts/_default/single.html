@@ -2,7 +2,9 @@
 <article>
   <header class="page-header">
     <h1>{{ .Title }}</h1>
-    <a class="back" href="{{ .Site.Home.RelPermalink }}">Tilbage til forsiden</a>
+    <a class="back" href="{{ .Site.Home.RelPermalink }}">
+      <svg class="back-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="8"/><path d="M4 8l4-4v2.5h4v3H8V12z"/></svg>
+      Tilbage til forsiden</a>
   </header>
   {{- .Content }}
 </article>

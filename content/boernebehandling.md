@@ -1,7 +1,7 @@
 ---
 title: "Behandling af børn og unge"
 linkTitle: "Børnebehandling"
-tile: "Børn og unge"
+tile: "BØRN og UNGE"
 description: "Berøring er med til at dække et barns behov for nærhed og tryghed. Barnet vil føle sig set og opleve større fornemmelse for egen krop."
 weight: 50
 draft: false

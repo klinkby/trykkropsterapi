@@ -1,10 +1,12 @@
 ---
 title: "Kropsterapi (ManuVision)"
 linkTitle: "Kropsterapi"
-tile: "Kropsterapi (ManuVision)"
+tile: "KROPSTERAPI (ManuVision)"
 description: "Kropsterapi er som ordet siger: terapi - for kroppen. Hvis kroppen ikke har det godt, har vi det heller ikke godt."
 weight: 10
 draft: false
+# Gammel URL fra det nuværende site
+aliases: ["/kropsterapi (manuvision)/"]
 ---
 
 > Kropsterapi er som ordet siger: terapi - for kroppen. Hvis kroppen ikke har det godt, har vi det

@@ -127,7 +127,8 @@ h2 { font-size: 1.75rem; margin-top: 1.25em; }
   align-items: baseline;
   gap: 0 var(--gutter);
 }
-.back::before { content: "← "; }
+.back-icon { width: 1em; height: 1em; vertical-align: -.15em; fill: currentColor; }
+.back-icon path { fill: var(--paper); }
 
 blockquote {
   margin: 0 0 20px;
@@ -165,7 +166,6 @@ blockquote > :last-child { margin-bottom: 0; }
   font-size: 1.1em;
   font-weight: bold;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
 }
 .tiles a:hover { border-color: var(--link); text-decoration: none; }

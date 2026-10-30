@@ -1,7 +1,7 @@
 ---
 title: "Kropsterapeutisk workshop - træning for hele kroppen"
 linkTitle: "Workshops og træning"
-tile: "Workshops & træning"
+tile: "WORKSHOPS & TRÆNING"
 description: "Disse workshops er for alle og kræver ingen særlige forudsætninger. Kropsterapeutisk træning flytter opmærksomhed fra hovedets tanker og ned i kroppen."
 weight: 40
 draft: false
