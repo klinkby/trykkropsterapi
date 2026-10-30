@@ -2,7 +2,7 @@
 baseURL = "https://klinkby.github.io/trykmassage/"
 locale = "da-dk"
 defaultContentLanguage = "da"
-title = "trykmassage"
+title = "TRYK - Kropsterapi Sang Massage"
 
 # We author every page/section/list/home template ourselves under layouts/.
 # No RSS/taxonomies are part of the information architecture, so they are
@@ -25,3 +25,20 @@ enableRobotsTXT = true # genereres af layouts/robots.txt
 [params]
   # Må ikke indekseres før sitet er klar. Sæt til false ved lancering.
   noindex = true
+
+  # Alle værdier er hentet fra det nuværende www.trykkropsterapi.nu.
+  logo_name    = "TRYK"
+  logo_tagline = "Kropsterapi og Sang"
+  business_name = "TRYK - Kropsterapi og Sang"
+
+  address_street   = "Kigkurren 8D, st.tv."
+  address_postcode = "2300"
+  address_city     = "København S"
+
+  telefon_display = "+45 26 14 89 38"
+  telefon_tel     = "+4526148938"
+  email           = "trykmassage@gmail.com"
+  cvr             = "33888996"
+
+  facebook_url = "https://www.facebook.com/pages/TRYK-Massage-på-Islands-Brygge/226772370714918"
+  booking_url  = "https://www.trykkropsterapi.nu/booking"

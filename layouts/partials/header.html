@@ -1,7 +1,23 @@
-<header>
-  <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+{{- $p := .Site.Params }}
+<header class="site-header">
+  <a class="logo" href="{{ .Site.Home.RelPermalink }}" title="Til forsiden">
+    <span class="logo-text">
+      <span class="logo-name">{{ $p.logo_name }}</span>
+      <span class="logo-tagline">{{ $p.logo_tagline }}</span>
+    </span>
+    {{- partial "picture.html" (dict "path" "img/fingeraftryk.png" "alt" "" "class" "logo-mark") }}
+  </a>
+  <div class="header-actions">
+    {{- with $p.facebook_url }}
+    {{- $fb := resources.Get "img/facebook.png" }}
+    <a class="facebook" href="{{ . }}" rel="noopener noreferrer" target="_blank"><img src="{{ $fb.RelPermalink }}" width="16" height="16" alt=""> Følg mig på Facebook</a>
+    {{- end }}
+    {{- with $p.booking_url }}
+    <a class="btn" href="{{ . }}" title="Gå til tidsbestilling">Book tid og se priser</a>
+    {{- end }}
+  </div>
   {{- with .Site.Menus.main }}
-  <nav aria-label="Primær navigation">
+  <nav class="primary-nav" aria-label="Primær navigation">
     <ul>
       {{- range . }}
       <li><a href="{{ .URL }}"{{ if eq .URL $.RelPermalink }} aria-current="page"{{ end }}>{{ .Name }}</a></li>

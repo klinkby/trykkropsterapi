@@ -35,6 +35,22 @@ original-formatet som fallback:
 Markdown-billeder (`![alt](/img/x.jpg)`) går automatisk gennem samme partial via
 `layouts/_default/_markup/render-image.html`.
 
+## Design
+
+Udledt af det nuværende www.trykkropsterapi.nu og omskrevet til ren CSS uden
+Bootstrap i `assets/css/main.css`. Baggrundsmønstret (bg.png) er erstattet af en
+CSS-gradient; fingeraftrykket og Facebook-ikonet ligger i `assets/img/`.
+
+| Token          | Værdi     | Brug                                         |
+| -------------- | --------- | -------------------------------------------- |
+| `--paper`      | `#F5F9FC` | Sidebaggrund                                 |
+| `--heading`    | `#555555` | Overskrifter (7,04:1)                        |
+| `--link`       | `#2A6496` | Links (5,9:1). Originalens `#337AB7` gav kun 4,3:1 |
+| `--mint`       | `#77C8A6` | Footer og knap; tekst `#333`/`#000` (6,38:1 / 10,6:1) |
+| `--gold`       | `#C59D51` | Kun logoet (2,39:1 — logotype, undtaget WCAG) |
+
+Systemskrifttyper: Didot-stakken til brødtekst, Futura-stakken til overskrifter.
+
 ## Udgivelse
 
 `.github/workflows/deploy.yml` bygger og udgiver ved push til `main`.
@@ -57,7 +73,9 @@ giver `Disallow: /` i robots.txt og et `noindex`-metatag).
 
 - **Domæne.** Ukendt — `static/CNAME` mangler, og `baseURL` peger på
   `klinkby.github.io/trykmassage/`.
-- **Indhold og design.** Kommer i næste trin.
+- **Adresse.** Footeren på det nuværende site skriver "Kigkurren 8D, st.tv.",
+  men kortlinket peger på "Kigkurren 8T". Sitet bruger 8D. Skal bekræftes.
+- **Indhold.** Siderne er tomme pladsholdere.
 
 ## Sikkerhed
 
