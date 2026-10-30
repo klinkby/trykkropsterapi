@@ -1,5 +1,4 @@
-# TODO: sæt det rigtige domæne (og static/CNAME) når det kendes.
-baseURL = "https://klinkby.github.io/trykkropsterapi/"
+baseURL = "https://beta.trykkropsterapi.nu/"
 locale = "da-dk"
 defaultContentLanguage = "da"
 title = "TRYK - Kropsterapi Sang Massage"
@@ -26,7 +25,8 @@ enableRobotsTXT = true # genereres af layouts/robots.txt
       block = true
 
 [params]
-  # Må ikke indekseres før sitet er klar. Sæt til false ved lancering.
+  # Beta-sitet må ikke indekseres — det ville konkurrere med det live
+  # trykkropsterapi.nu om de samme tekster. Sæt til false ved skift til www.
   noindex = true
 
   # Alle værdier er hentet fra det nuværende www.trykkropsterapi.nu.
