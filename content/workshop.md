@@ -1,7 +1,7 @@
 ---
 title: "Workshops - teambuilding - polterabend"
 linkTitle: "Workshop"
-tile: "Teambuilding & polterabend"
+tile: "TEAMBUILDING & POLTERABEND"
 description: "Når vi synger sammen, hører vi sammen, og der skabes nærvær, glæde og en stor mængde positiv energi mellem deltagerne."
 weight: 70
 draft: false
