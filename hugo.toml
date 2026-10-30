@@ -21,6 +21,9 @@ enableRobotsTXT = true # genereres af layouts/robots.txt
       # Raw/unsafe HTML in Markdown stays disabled — content authors use
       # shortcodes (see layouts/shortcodes/) for anything beyond prose.
       unsafe = false
+    [markup.goldmark.parser.attribute]
+      # Lader indhold sætte en klasse på et afsnit, fx {.center} eller {.photo}.
+      block = true
 
 [params]
   # Må ikke indekseres før sitet er klar. Sæt til false ved lancering.

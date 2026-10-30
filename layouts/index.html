@@ -1,4 +1,9 @@
 {{- define "main" }}
-<h1>{{ .Title }}</h1>
+<h1 class="visually-hidden">{{ .Title }}</h1>
 {{- .Content }}
+<ul class="tiles">
+  {{- range .Site.RegularPages.ByWeight }}
+  <li><a href="{{ .RelPermalink }}">{{ .Params.tile | default .LinkTitle }}</a></li>
+  {{- end }}
+</ul>
 {{- end }}

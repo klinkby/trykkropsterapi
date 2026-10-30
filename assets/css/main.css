@@ -39,10 +39,20 @@ a { color: var(--link); }
 a:hover { color: #23527c; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
-h1 {
+h1, h2 {
   font: 500 2.25rem/1.1 var(--sans);
   color: var(--heading);
   margin: 0 0 .5em;
+}
+h2 { font-size: 1.75rem; margin-top: 1.25em; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .skip-link {
@@ -137,6 +147,37 @@ blockquote {
 blockquote > :first-child { margin-top: 0; }
 blockquote > :last-child { margin-bottom: 0; }
 
+/* Klasser sat fra Markdown med {.klasse} */
+.center { text-align: center; }
+.caption { font-size: .9em; color: var(--heading); }
+.badge { text-align: center; }
+.badge img { width: 75px; }
+.photo img { display: block; width: 100%; max-width: 375px; margin-inline: auto; }
+
+/* Forside */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tiles a {
+  display: block;
+  padding: .6em 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.tiles a:hover { border-color: var(--link); }
+
 /* Footer */
 .site-footer {
   display: grid;
@@ -179,6 +220,10 @@ blockquote > :last-child { margin-bottom: 0; }
   .footer-address { text-align: right; }
 
   blockquote { width: 61%; }
+
+  .photo { float: right; width: 33%; margin: 0 0 1em 2em; }
+  .photo + .caption { clear: right; float: right; width: 33%; margin: -.5em 0 1em 2em; text-align: center; }
+  article::after { content: ""; display: table; clear: both; }
 }
 
 @media (max-width: 767px) {

@@ -75,7 +75,14 @@ giver `Disallow: /` i robots.txt og et `noindex`-metatag).
   `klinkby.github.io/trykmassage/`.
 - **Adresse.** Footeren på det nuværende site skriver "Kigkurren 8D, st.tv.",
   men kortlinket peger på "Kigkurren 8T". Sitet bruger 8D. Skal bekræftes.
-- **Indhold.** Siderne er tomme pladsholdere.
+- **Sundhedsløfter.** Teksterne er overført ordret fra det nuværende site og
+  indeholder formuleringer som "yderst effektivt ved stresstilstande" og "har
+  stor effekt ved". Komplementær behandling må ikke love resultater — bør
+  omformuleres til, hvad klienter typisk oplever.
+- **Fysiurgisk massage.** Siden fortæller, at den ikke kan bookes længere, men
+  ligger stadig som flise på forsiden. Skal siden blive?
+- **Booking.** Alle "Gå til tidsbestilling"-links peger på det nuværende sites
+  `/booking`, som ikke er flyttet med.
 
 ## Sikkerhed
 
