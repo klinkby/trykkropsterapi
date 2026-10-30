@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Hugo site for trykmassage. Static, deployed to GitHub Pages.
+Hugo site for trykkropsterapi. Static, deployed to GitHub Pages.
 
 ## Commands
 
@@ -31,8 +31,6 @@ source. No source, no claim — leave a TODO and say so. Never fabricate a clien
 
 **Danish.** Idiomatic Danish, `du` form, correct æ/ø/å. No generic wellness copy.
 
-**No medical promises.** Complementary treatment, legally cannot promise results.
-
 **Colour.** All text pairs must pass WCAG AA 4.5:1; verify, don't assume.
 
 **Zero third-party requests.** System fonts only, local images only. No Google Fonts, no CDN, no
@@ -46,6 +44,11 @@ computed in `layouts/partials/head.html`; anything else inline will be blocked.
 ## Front matter
 
 All pages: `title`, `description` (≤155 chars, becomes the meta description), `draft`.
+Content pages also: `linkTitle` (menu name, when shorter than `title`), `tile` (home page tile
+label), `weight` (tile and menu order).
+
+Paragraph classes from Markdown via `{.class}` on the line after: `.center`, `.photo` (floated
+portrait), `.caption`, `.badge`.
 
 ## Before committing
 

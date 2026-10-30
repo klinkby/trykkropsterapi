@@ -1,3 +1,20 @@
-<footer>
-  <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+{{- $p := .Site.Params }}
+<footer class="site-footer">
+  <address class="footer-address">
+    {{ $p.business_name }}<br>
+    {{ $p.address_street }}<br>
+    {{ $p.address_postcode }} {{ $p.address_city }}
+  </address>
+  <dl class="footer-contact">
+    {{- with $p.telefon_display }}
+    <dt>Tlf.</dt><dd><a href="tel:{{ $p.telefon_tel }}">{{ . }}</a></dd>
+    {{- end }}
+    {{- with $p.email }}
+    <dt>Mail</dt><dd><a href="mailto:{{ . }}">{{ . }}</a></dd>
+    {{- end }}
+    {{- with $p.cvr }}
+    <dt>CVR</dt><dd>{{ . }}</dd>
+    {{- end }}
+  </dl>
+  <p class="footer-legal">&copy; {{ now.Year }} {{ $p.business_name }}</p>
 </footer>

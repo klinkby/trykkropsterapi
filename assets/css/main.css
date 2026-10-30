@@ -1,1 +1,232 @@
-/* Hele designsystemet i én fil. Tilføjes i næste trin. */
+/* TRYK — hele designsystemet. Udledt af www.trykkropsterapi.nu, omskrevet uden Bootstrap. */
+
+:root {
+  --bg: #808080;
+  --paper: #f5f9fc;
+  --ink: #000;
+  --heading: #555;          /* 7,04:1 mod --paper */
+  --gold: #c59d51;          /* logo — logotype, undtaget kontrastkrav */
+  --mint: #77c8a6;          /* footer og knap */
+  --mint-light: #97d8c6;
+  --mint-quote: #a4dac4;    /* citatstreg, kun dekoration */
+  --link: #2a6496;          /* 5,9:1 mod --paper */
+  --muted: #333;            /* 6,38:1 mod --mint */
+
+  --serif: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+  --sans: "Futura PT", Futura, "Century Gothic", "Trebuchet MS", Verdana, sans-serif;
+
+  --gutter: 15px;
+  --radius: 15px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: 16px/1.43 var(--serif);
+  color: var(--ink);
+  /* Erstatter bg.png (4×4 px diagonalt mønster) uden billede. */
+  background: var(--bg) repeating-linear-gradient(45deg, rgb(0 0 0 / .05) 0 1px, transparent 1px 3px);
+}
+@media (min-width: 992px)  { body { font-size: 17px; } }
+@media (min-width: 1200px) { body { font-size: 18px; } }
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--link); }
+a:hover { color: #23527c; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+h1, h2 {
+  font: 500 2.25rem/1.1 var(--sans);
+  color: var(--heading);
+  margin: 0 0 .5em;
+}
+h2 { font-size: 1.75rem; margin-top: 1.25em; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  background: var(--paper);
+  padding: .5em 1em;
+}
+.skip-link:focus { left: var(--gutter); top: var(--gutter); z-index: 1; }
+
+/* Ramme */
+.page {
+  max-width: 1170px;
+  margin-inline: auto;
+  background: var(--paper);
+}
+.page > * { padding: var(--gutter); }
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gutter);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: var(--gold);
+  text-decoration: none;
+  text-align: center;
+}
+.logo:hover { color: var(--gold); }
+.logo-name { display: block; font-size: 2.5em; line-height: .9; }
+.logo-tagline { display: block; }
+.logo-mark { display: none; }
+
+.header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.facebook { text-decoration: none; }
+.facebook img { vertical-align: -2px; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 1.125rem;
+  line-height: 1.33;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: var(--mint);
+  color: var(--muted);
+  text-decoration: none;
+}
+.btn:hover { background: var(--mint-light); color: var(--muted); }
+
+.primary-nav { flex-basis: 100%; }
+.primary-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em 1.25em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.primary-nav [aria-current="page"] { color: var(--ink); text-decoration: none; }
+
+/* Indhold */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0 var(--gutter);
+}
+.back { text-decoration: none; }
+.back::before { content: "← "; }
+
+blockquote {
+  margin: 0 0 1.25em;
+  padding: .5em 1.25em;
+  border-left: 5px solid var(--mint-quote);
+  font-size: 1.1em;
+  font-style: italic;
+}
+blockquote > :first-child { margin-top: 0; }
+blockquote > :last-child { margin-bottom: 0; }
+
+/* Klasser sat fra Markdown med {.klasse} */
+.center { text-align: center; }
+.caption { font-size: .9em; color: var(--heading); }
+.badge { text-align: center; }
+.badge img { width: 75px; }
+.photo img { display: block; width: 100%; max-width: 375px; margin-inline: auto; }
+
+/* Forside */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 20px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tiles a {
+  display: block;
+  padding: .6em 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.tiles a:hover { border-color: var(--link); }
+
+/* Footer */
+.site-footer {
+  display: grid;
+  justify-content: center;
+  gap: 1em 2em;
+  margin-top: var(--gutter);
+  background: var(--mint);
+  text-align: center;
+}
+.site-footer a { color: var(--ink); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.footer-address { font-style: normal; }
+.footer-contact {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 0 .6em;
+  margin: 0;
+  text-align: left;
+}
+.footer-contact dt { color: var(--muted); }
+.footer-contact dd { margin: 0; }
+.footer-legal { grid-column: 1 / -1; margin: 0; font-size: .85em; }
+
+/* Bred skærm */
+@media (min-width: 768px) {
+  .page {
+    margin-block: var(--gutter);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 0 30px rgb(0 0 0 / .3);
+  }
+  .page > * { padding: 30px; }
+  .page > :first-child { padding-bottom: 0; }
+
+  .logo-name { font-size: 3.9em; }
+  .logo-mark { display: block; }
+
+  .site-footer { grid-template-columns: auto auto; }
+  .footer-address { text-align: right; }
+
+  blockquote { width: 61%; }
+
+  .photo { float: right; width: 33%; margin: 0 0 1em 2em; }
+  .photo + .caption { clear: right; float: right; width: 33%; margin: -.5em 0 1em 2em; text-align: center; }
+  article::after { content: ""; display: table; clear: both; }
+}
+
+@media (max-width: 767px) {
+  .site-header { flex-direction: column; align-items: center; }
+  .header-actions { align-items: center; }
+}
