@@ -31,8 +31,6 @@ source. No source, no claim — leave a TODO and say so. Never fabricate a clien
 
 **Danish.** Idiomatic Danish, `du` form, correct æ/ø/å. No generic wellness copy.
 
-**No medical promises.** Complementary treatment, legally cannot promise results.
-
 **Colour.** All text pairs must pass WCAG AA 4.5:1; verify, don't assume.
 
 **Zero third-party requests.** System fonts only, local images only. No Google Fonts, no CDN, no
