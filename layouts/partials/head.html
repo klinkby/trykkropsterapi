@@ -46,6 +46,17 @@
 {{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- /* Faneikon: abstrakt fingeraftryk. apple-touch-icon.png er favicon.svg
+       renderet til 180 px på sidebaggrunden, og static/favicon.ico er den samme i
+       16/32/48 px — gendan begge, hvis SVG'en ændres. */}}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+{{- with resources.Get "img/favicon.svg" }}
+<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}">
+{{- end }}
+{{- with resources.Get "img/apple-touch-icon.png" }}
+<link rel="apple-touch-icon" href="{{ .RelPermalink }}">
+{{- end }}
+
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:title" content="{{ $title }}">
 {{- with $description }}
