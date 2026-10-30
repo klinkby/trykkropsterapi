@@ -1,0 +1,16 @@
+{{- /* Viderestilling til en ekstern adresse (GitHub Pages kan ikke sende HTTP-
+       redirects). Målet er site-parameteren i front matter `redirect_param`. */ -}}
+{{- $to := index .Site.Params .Params.redirect_param -}}
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>{{ .Title }}</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ $to }}">
+<meta http-equiv="refresh" content="0; url={{ $to }}">
+</head>
+<body>
+<p><a href="{{ $to }}">{{ .Title }}</a></p>
+</body>
+</html>

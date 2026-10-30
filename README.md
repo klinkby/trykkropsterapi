@@ -83,6 +83,15 @@ Beta-sitet er sat til **ikke at blive indekseret**: `noindex = true` i
 
 GitHub Pages tillader kun ét brugerdefineret domæne pr. repository.
 
+### Viderestillinger
+
+GitHub Pages kan ikke sende HTTP-redirects, så gamle adresser viderestilles med
+`<meta http-equiv="refresh">`:
+
+- Sider med nyt navn: `aliases` i sidens front matter (fx `/kropsterapi (manuvision)`).
+- `/booking`, `/booking/confirm` og `/my` → `booking_url` i `hugo.toml`, via
+  `content/redirect-*.md` og `layouts/_default/redirect.html`.
+
 ## Mangler afklaring
 
 - **Adresse.** Footeren på det nuværende site skriver "Kigkurren 8D, st.tv.",
