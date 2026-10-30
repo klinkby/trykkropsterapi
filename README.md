@@ -81,8 +81,6 @@ giver `Disallow: /` i robots.txt og et `noindex`-metatag).
   omformuleres til, hvad klienter typisk oplever.
 - **Fysiurgisk massage.** Siden fortæller, at den ikke kan bookes længere, men
   ligger stadig som flise på forsiden. Skal siden blive?
-- **Booking.** Alle "Gå til tidsbestilling"-links peger på det nuværende sites
-  `/booking`, som ikke er flyttet med.
 
 ## Sikkerhed
 

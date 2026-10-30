@@ -50,4 +50,4 @@ Jeg anbefaler at drikke rigeligt vand både før og efter behandlingen.
 
 Jeg svarer gerne på spørgsmål via mail eller sms.
 
-[Gå til tidsbestilling](https://www.trykkropsterapi.nu/booking)
+[Gå til tidsbestilling](https://trykkropsterapi.booqr.dk/)

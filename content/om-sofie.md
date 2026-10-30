@@ -48,4 +48,4 @@ Men også her har jeg mit fokus på kroppen og elevens behov og potentiale. Jeg 
 finde sin egen naturlige stemme og sit eget udtryk gennem arbejdet med åndedræt, klang, rytmik og
 tekstanalyse.
 
-[Se priser og book en tid](https://www.trykkropsterapi.nu/booking)
+[Se priser og book en tid](https://trykkropsterapi.booqr.dk/)

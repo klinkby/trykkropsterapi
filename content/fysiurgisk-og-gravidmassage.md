@@ -65,4 +65,4 @@ plads til maven.
 
 Massagen tilpasses i øvrigt til den gravides behov, følsomhed, smertetærskel og personlighed.
 
-[Gå til tidsbestilling](https://www.trykkropsterapi.nu/booking)
+[Gå til tidsbestilling](https://trykkropsterapi.booqr.dk/)

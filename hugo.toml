@@ -44,4 +44,4 @@ enableRobotsTXT = true # genereres af layouts/robots.txt
   cvr             = "33888996"
 
   facebook_url = "https://www.facebook.com/pages/TRYK-Massage-på-Islands-Brygge/226772370714918"
-  booking_url  = "https://www.trykkropsterapi.nu/booking"
+  booking_url  = "https://trykkropsterapi.booqr.dk/"

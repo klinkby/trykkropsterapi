@@ -50,4 +50,4 @@ Tænker du, at dit barns udfordringer er af sansemotorisk eller motorisk karakte
 dig at læse mere hos min kollega Mine Camilla Olsen, som er indehaver af
 [mineco.dk](https://www.mineco.dk/born-og-unge).
 
-[Gå til tidsbestilling](https://www.trykkropsterapi.nu/booking)
+[Gå til tidsbestilling](https://trykkropsterapi.booqr.dk/)

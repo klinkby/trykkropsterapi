@@ -39,4 +39,4 @@ Pris: 200 kr.
 For nærmere info om tilmelding, hold, tider mm. - find mig på Facebook, hvor jeg løbende slår hold
 op: [Følg mig på Facebook](https://www.facebook.com/pages/TRYK-Massage-på-Islands-Brygge/226772370714918)
 
-[Gå til tidsbestilling](https://www.trykkropsterapi.nu/booking)
+[Gå til tidsbestilling](https://trykkropsterapi.booqr.dk/)

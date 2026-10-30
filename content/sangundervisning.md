@@ -30,4 +30,4 @@ Undervisningen vil bl.a. indeholde:
 Jeg underviser specifikke lørdage. Pris: 750 kr./60 min.**
 {.center}
 
-[Gå til tidsbestilling](https://www.trykkropsterapi.nu/booking)
+[Gå til tidsbestilling](https://trykkropsterapi.booqr.dk/)
