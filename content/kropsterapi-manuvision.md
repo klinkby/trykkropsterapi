@@ -5,9 +5,6 @@ tile: "Kropsterapi (ManuVision)"
 description: "Kropsterapi er som ordet siger: terapi - for kroppen. Hvis kroppen ikke har det godt, har vi det heller ikke godt."
 weight: 10
 draft: false
-menus:
-  main:
-    weight: 10
 ---
 
 > Kropsterapi er som ordet siger: terapi - for kroppen. Hvis kroppen ikke har det godt, har vi det

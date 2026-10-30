@@ -44,8 +44,8 @@ computed in `layouts/partials/head.html`; anything else inline will be blocked.
 ## Front matter
 
 All pages: `title`, `description` (≤155 chars, becomes the meta description), `draft`.
-Content pages also: `linkTitle` (menu name, when shorter than `title`), `tile` (home page tile
-label), `weight` (tile and menu order).
+Content pages also: `linkTitle` (short name, when shorter than `title`), `tile` (home page tile
+label), `weight` (tile order).
 
 Paragraph classes from Markdown via `{.class}` on the line after: `.center`, `.photo` (floated
 portrait), `.caption`, `.badge`.

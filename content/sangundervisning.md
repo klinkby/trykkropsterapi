@@ -4,9 +4,6 @@ tile: "Sangundervisning"
 description: "Ønsker du at lære din sangstemme bedre at kende? Har du brug for hjælp til optagelsesprøve eller audition? Mangler du sangundervisning til dit barn?"
 weight: 20
 draft: false
-menus:
-  main:
-    weight: 20
 ---
 
 > Ønsker du at lære din sangstemme bedre at kende? Har du brug for hjælp til optagelsesprøve eller
